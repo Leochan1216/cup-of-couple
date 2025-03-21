@@ -25,7 +25,7 @@ $font-garamond: "Cormorant Garamond", serif;
 body {
     background-color: $primary-color;
     color: $text-color;
-    padding: 1rem;
+    padding: .5rem;
 }
 
 header {
@@ -35,8 +35,6 @@ header {
     font-weight: normal;
     text-transform: uppercase;
     display: flex;
-    justify-content: center;
-    align-items: center;
     top: 0;
     left: 0;
     right: 0;
@@ -51,13 +49,13 @@ header {
         font-weight: inherit;
         cursor: pointer;
         margin: 0;
-        padding: 1rem;
+        padding: 0.5rem;
         text-align: center;
         width: 50vw;
     }   
 
     h1 {
-        border-right: 1px solid #ccc;
+        border-right: 1px solid #a7a7a7;
     }
 }
 
@@ -77,7 +75,7 @@ nav {
         text-align: center;
         list-style: none;
         z-index: 10;
-        padding: 1rem; 
+        padding-inline-start: 0;
     }
 
     .dropdown li {
@@ -94,5 +92,8 @@ nav {
 input {
     font-family: $font-garamond;
     font-style: italic;
-    }
+    background-color: $primary-color;
+    border: none;
+    text-align: center;
+    } 
 }

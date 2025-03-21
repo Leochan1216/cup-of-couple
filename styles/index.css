@@ -1,7 +1,7 @@
 body {
   background-color: #f0f0f0;
   color: #303030;
-  padding: 1rem;
+  padding: 0.5rem;
 }
 
 header {
@@ -11,8 +11,6 @@ header {
   font-weight: normal;
   text-transform: uppercase;
   display: flex;
-  justify-content: center;
-  align-items: center;
   top: 0;
   left: 0;
   right: 0;
@@ -26,12 +24,12 @@ header h1, header h2 {
   font-weight: inherit;
   cursor: pointer;
   margin: 0;
-  padding: 1rem;
+  padding: 0.5rem;
   text-align: center;
   width: 50vw;
 }
 header h1 {
-  border-right: 1px solid #ccc;
+  border-right: 1px solid #a7a7a7;
 }
 
 nav {
@@ -49,7 +47,7 @@ nav .dropdown {
   text-align: center;
   list-style: none;
   z-index: 10;
-  padding: 1rem;
+  padding-inline-start: 0;
 }
 nav .dropdown li {
   text-decoration: underline;
@@ -63,6 +61,9 @@ nav .dropdown li:not(:last-child) {
 nav input {
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
+  background-color: #f0f0f0;
+  border: none;
+  text-align: center;
 }
 
 /*# sourceMappingURL=index.css.map */

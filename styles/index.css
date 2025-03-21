@@ -29,7 +29,7 @@ header h1, header h2 {
   width: 50vw;
 }
 header h1 {
-  border-right: 1px solid #a7a7a7;
+  border-right: 1px solid #ccc;
 }
 
 nav {
@@ -55,10 +55,8 @@ nav .dropdown li {
 }
 nav .dropdown li:not(:last-child) {
   border-bottom: 1px solid #ccc;
-  margin-bottom: 0.5rem;
-  padding-bottom: 0.5rem;
 }
-nav input {
+nav .dropdown input {
   font-family: "Cormorant Garamond", serif;
   font-style: italic;
   background-color: #f0f0f0;
@@ -72,6 +70,8 @@ nav input {
     display: flex;
     justify-content: center;
     position: relative;
+    border-bottom: none;
+    border-top: 1px solid #7b7b7b;
   }
   header h1 {
     font-family: "Yatra One", system-ui;
@@ -89,23 +89,30 @@ nav input {
     top: 100%;
     left: 0;
     right: 0;
+    border-bottom: 1px solid #7b7b7b;
   }
   nav .dropdown li {
     width: 16.7vw;
-    border: 1px solid #ccc;
-    padding: 1rem 0.5rem 1rem;
+    border: 1px solid #7b7b7b;
+    padding: 1rem;
     font-size: 0.8rem;
+    height: 1rem;
+    margin: 0;
+    text-decoration: none;
   }
-  nav .bag,
-  nav .access {
+  nav .dropdown li:not(:last-child) {
+    border-bottom: none;
+  }
+  nav .dropdown .bag,
+  nav .dropdown .access {
     display: none;
   }
-  nav .diary {
-    border-left: none !important;
+  nav .dropdown .diary {
+    border-left: none;
   }
-  nav input {
-    border: none;
-    padding: 0;
+  nav .dropdown .search {
+    border-right: none;
+    border-bottom: none;
   }
 }
 

@@ -18,6 +18,12 @@ $font-literata: "Literata", serif;
 //italics
 $font-garamond: "Cormorant Garamond", serif;
 
+//mobile border  
+$mobile-border: 1px solid #ccc;
+
+//desktop border 
+$desktop-border: 1px solid #7b7b7b;
+
 
 
 
@@ -41,7 +47,7 @@ header {
     width: 100%;
     z-index: 20;
     position: fixed;
-    border-bottom: 1px solid #ccc; 
+    border-bottom: $mobile-border; 
    
 
     h1, h2 {
@@ -55,7 +61,7 @@ header {
     }   
 
     h1 {
-        border-right: 1px solid #a7a7a7;
+        border-right: $mobile-border;
     }
 }
 
@@ -76,26 +82,25 @@ nav {
         list-style: none;
         z-index: 10;
         padding-inline-start: 0;
+
+        li {
+            text-decoration: underline;
+            padding: .5rem;
+        }
+    
+        li:not(:last-child) {
+            border-bottom: $mobile-border; 
+        }
+
+        input {
+            font-family: $font-garamond;
+            font-style: italic;
+            background-color: $primary-color;
+            border: none;
+            text-align: center;
+            } 
     }
 
-    .dropdown li {
-        text-decoration: underline;
-        padding: .5rem;
-    }
-
-    .dropdown li:not(:last-child) {
-        border-bottom: 1px solid #ccc; 
-        margin-bottom: 0.5rem; 
-        padding-bottom: 0.5rem;
-    }   
-
-input {
-    font-family: $font-garamond;
-    font-style: italic;
-    background-color: $primary-color;
-    border: none;
-    text-align: center;
-    } 
 }
 
 @media screen and (min-width: 800px) {
@@ -105,6 +110,8 @@ input {
         display: flex;
         justify-content: center;
         position: relative;
+        border-bottom: none;
+        border-top: $desktop-border;
 
         h1 {
             font-family: $font-title;
@@ -118,6 +125,7 @@ input {
     }
 
     nav {
+       
         .dropdown {
             display: flex !important;
             flex-direction: row;
@@ -126,27 +134,38 @@ input {
             top: 100%;
             left: 0;
             right: 0;
-        }
-        .dropdown li {
-            width: 16.7vw;
-            border: 1px solid #ccc;
-            padding: 1rem 0.5rem 1rem;
-            font-size: .8rem;
-        }
+            border-bottom: $desktop-border;
 
-        .bag,
-        .access {
-            display: none;
-        }
+            li {
+                width: 16.7vw;
+                border: $desktop-border;
+                padding: 1rem;
+                font-size: .8rem;
+                height: 1rem;
+                margin: 0;
+                text-decoration: none;
+            }
 
-        .diary {
-            border-left: none !important;
-        }
+            li:not(:last-child) {
+                border-bottom: none; 
+            } 
+    
+            .bag,
+            .access {
+                display: none;
+            }
+    
+            .diary {
+                border-left: none;
+            }
 
-        input {
-            border: none;
-            padding: 0;
+            .search {
+                border-right: none;
+                border-bottom: none;
+            }
+    
         }
+        
     }
 
 }

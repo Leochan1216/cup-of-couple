@@ -66,4 +66,29 @@ nav input {
   text-align: center;
 }
 
+@media screen and (min-width: 800px) {
+  header {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    position: relative;
+  }
+  header h1 {
+    font-family: "Yatra One", system-ui;
+    border-right: none;
+    font-size: 48px;
+  }
+  header h2 {
+    display: none;
+  }
+  nav .dropdown {
+    display: flex !important;
+    flex-direction: row;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+  }
+}
+
 /*# sourceMappingURL=index.css.map */

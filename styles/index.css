@@ -1,0 +1,11 @@
+@font-face {
+  font-family: "OnO";
+  src: url("../fonts/OnO.ttf.woff") format("woff"), url("../fonts/OnO.ttf.svg#OnO") format("svg"), url("../fonts/OnO.ttf.eot"), url("../fonts/OnO.ttf.eot?#iefix") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+h1 {
+  font-family: "OnO", sans-serif;
+}
+
+/*# sourceMappingURL=index.css.map */

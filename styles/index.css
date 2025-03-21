@@ -27,8 +27,8 @@ header h1, header h2 {
   cursor: pointer;
   margin: 0;
   padding: 1rem;
-  flex-grow: 1;
   text-align: center;
+  width: 50vw;
 }
 header h1 {
   border-right: 1px solid #ccc;

@@ -1,17 +1,98 @@
-//Variables
+//VARIABLES
+
+//background color
 $primary-color: #f0f0f0;
 
-//Title font
-@font-face {
-    font-family: 'OnO'; 
-    src: url('../fonts/OnO.ttf.woff') format('woff'), 
-         url('../fonts/OnO.ttf.svg#OnO') format('svg'), 
-         url('../fonts/OnO.ttf.eot'), 
-         url('../fonts/OnO.ttf.eot?#iefix') format('embedded-opentype'); 
-    font-weight: normal; 
-    font-style: normal; 
+//text color
+$text-color: #303030;
+
+//title font
+$font-title: "Yatra One", system-ui;
+
+//general text
+$font-franklin: "Libre Franklin", sans-serif;
+
+//h2,h3,h4
+$font-literata: "Literata", serif;
+
+//italics
+$font-garamond: "Cormorant Garamond", serif;
+
+
+
+
+
+body {
+    background-color: $primary-color;
+    color: $text-color;
+    padding: 1rem;
 }
 
-h1 {
-    font-family: 'OnO', sans-serif;
+header {
+    font-family: $font-franklin;
+    text-decoration: underline;
+    font-size: 0.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    z-index: 20;
+    position: fixed;
+    border-bottom: 1px solid #ccc; 
+   
+
+    h1, h2 {
+        font-size: inherit;
+        font-weight: inherit;
+        cursor: pointer;
+        margin: 0;
+        padding: 1rem;
+        flex-grow: 1;
+        text-align: center;
+    }
+
+    h1 {
+        border-right: 1px solid #ccc
+    }
+}
+
+nav {
+    font-family: $font-franklin;
+    font-size: 0.5rem;
+    font-weight: normal;
+    text-transform: uppercase;
+    position: relative;
+    
+
+    .dropdown {
+        display: none;
+        position: fixed;
+        left: 0;
+        right: 0;
+        text-align: center;
+        list-style: none;
+        z-index: 10;
+        padding: 1rem; 
+    }
+
+    .dropdown li {
+        text-decoration: underline;
+        padding: .5rem;
+    }
+
+    .dropdown li:not(:last-child) {
+        border-bottom: 1px solid #ccc; 
+        margin-bottom: 0.5rem; 
+        padding-bottom: 0.5rem;
+    }   
+
+input {
+    font-family: $font-garamond;
+    font-style: italic;
+    }
 }

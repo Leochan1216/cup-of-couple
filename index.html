@@ -5,31 +5,39 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cup of Couple - Creative Studio and Diary</title>
     <link rel="stylesheet" href="styles/index.css">
+    <!--Fonts-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300..700;1,300..700&family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Literata:ital,opsz,wght@0,7..72,200..900;1,7..72,200..900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yatra+One&display=swap" rel="stylesheet">
 </head>
 <body>
+
     <header>
         <h1>Cup of Couple</h1>
-        <nav>
-            <h2>menu</h2>
-            <ul class="dropdown">
-                <li>Visual diary</li>
-                <li>Creative studio</li>
-                <li>About</li>
-                <li>Workshops</li>
-                <li>Store</li>
-                <li>Bag: 0</li>
-                <li>Access</li>
-                <li>
-                    <form action="/search" method="get">
-                      <input type="text" placeholder="Search..." name="q" />
-                    </form>
-                </li>
-            </ul>
-        </nav>
-    </header>
+        <h2 id="menuToggle">menu</h2>
+     </header>
+     
+     <nav>
+        <ul class="dropdown" id="dropdown">
+            <li>Visual diary</li>
+            <li>Creative studio</li>
+            <li>About</li>
+            <li>Workshops</li>
+            <li>Store</li>
+            <li>Bag: 0</li>
+            <li>Access</li>
+            <li>
+                <form action="/search" method="get">
+                  <input type="text" placeholder="Search..." name="q" />
+                </form>
+            </li>
+        </ul>
+    </nav>
 
     <main>
 
     </main>
 </body>
+<script src="index.js"></script>
 </html>

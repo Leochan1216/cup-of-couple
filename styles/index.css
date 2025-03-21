@@ -1,11 +1,68 @@
-@font-face {
-  font-family: "OnO";
-  src: url("../fonts/OnO.ttf.woff") format("woff"), url("../fonts/OnO.ttf.svg#OnO") format("svg"), url("../fonts/OnO.ttf.eot"), url("../fonts/OnO.ttf.eot?#iefix") format("embedded-opentype");
-  font-weight: normal;
-  font-style: normal;
+body {
+  background-color: #f0f0f0;
+  color: #303030;
+  padding: 1rem;
 }
-h1 {
-  font-family: "OnO", sans-serif;
+
+header {
+  font-family: "Libre Franklin", sans-serif;
+  text-decoration: underline;
+  font-size: 0.5rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 20;
+  position: fixed;
+  border-bottom: 1px solid #ccc;
+}
+header h1, header h2 {
+  font-size: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  margin: 0;
+  padding: 1rem;
+  flex-grow: 1;
+  text-align: center;
+}
+header h1 {
+  border-right: 1px solid #ccc;
+}
+
+nav {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 0.5rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  position: relative;
+}
+nav .dropdown {
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  list-style: none;
+  z-index: 10;
+  padding: 1rem;
+}
+nav .dropdown li {
+  text-decoration: underline;
+  padding: 0.5rem;
+}
+nav .dropdown li:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+  margin-bottom: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+nav input {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
 }
 
 /*# sourceMappingURL=index.css.map */

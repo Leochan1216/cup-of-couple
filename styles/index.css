@@ -84,10 +84,28 @@ nav input {
   nav .dropdown {
     display: flex !important;
     flex-direction: row;
+    justify-content: space-evenly;
     position: absolute;
     top: 100%;
     left: 0;
     right: 0;
+  }
+  nav .dropdown li {
+    width: 16.7vw;
+    border: 1px solid #ccc;
+    padding: 1rem 0.5rem 1rem;
+    font-size: 0.8rem;
+  }
+  nav .bag,
+  nav .access {
+    display: none;
+  }
+  nav .diary {
+    border-left: none !important;
+  }
+  nav input {
+    border: none;
+    padding: 0;
   }
 }
 

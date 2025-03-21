@@ -121,10 +121,31 @@ input {
         .dropdown {
             display: flex !important;
             flex-direction: row;
+            justify-content: space-evenly;
             position: absolute;
             top: 100%;
             left: 0;
             right: 0;
+        }
+        .dropdown li {
+            width: 16.7vw;
+            border: 1px solid #ccc;
+            padding: 1rem 0.5rem 1rem;
+            font-size: .8rem;
+        }
+
+        .bag,
+        .access {
+            display: none;
+        }
+
+        .diary {
+            border-left: none !important;
+        }
+
+        input {
+            border: none;
+            padding: 0;
         }
     }
 

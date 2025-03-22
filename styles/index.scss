@@ -64,6 +64,10 @@ body {
             text-align: center;
             width: 50vw;
         }   
+
+        .desktop-title-detail {
+            display: none;
+        }
     
         h1 {
             border-right: $mobile-border;
@@ -201,19 +205,40 @@ body {
             justify-content: center;
             position: sticky;
             border-bottom: none;
-            
-            //cahnge this too
+
+           
             h1 {
                 font-family: $font-title;
                 border-right: none;
                 font-size: 48px;
             }
 
-            //turn this in access/bag
+            
             h2 {
                 display: none;
             }
 
+        }
+
+        header.moved {
+            width: 50vw;
+            left: 0;
+            position: fixed;
+            border: $desktop-border;
+
+            h1{
+                font-family: $font-franklin;
+                font-size: .8rem;
+                padding: 1rem;
+            }
+
+            .desktop-title-detail {
+                display: inline;
+                font-family: $font-garamond; 
+                text-transform: capitalize;
+                font-style: italic;
+            }
+            
         }
 
         nav {
@@ -242,14 +267,31 @@ body {
                     margin: 0;
                     text-decoration: none;
                 }
-
-                li:not(:last-child) {
-                    border-bottom: none; 
-                } 
         
-                .bag,
+                .bag {
+                    display: none;
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                    width: 25vw;
+                    background-color: $primary-color;
+                    padding: .98rem 0;
+                    
+                }
+
                 .access {
                     display: none;
+                    position: fixed;
+                    top: 0;
+                    right: 25vw;
+                    width: 25vw;
+                    background-color: $primary-color;
+                    padding: .98rem 0;
+                }
+
+                // to reveal bag and access
+                .revealed {
+                    display: block;
                 }
         
                 .diary {
@@ -263,6 +305,10 @@ body {
         
             }
             
+        }
+
+        nav.scrolled {
+            top: 40px;
         }
 
     }

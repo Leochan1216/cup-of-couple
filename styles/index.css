@@ -31,6 +31,9 @@ body header h1, body header h2 {
   text-align: center;
   width: 50vw;
 }
+body header .desktop-title-detail {
+  display: none;
+}
 body header h1 {
   border-right: 1px solid #ccc;
 }
@@ -146,6 +149,23 @@ body nav .dropdown input {
   body header h2 {
     display: none;
   }
+  body header.moved {
+    width: 50vw;
+    left: 0;
+    position: fixed;
+    border: 1px solid #7b7b7b;
+  }
+  body header.moved h1 {
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+  body header.moved .desktop-title-detail {
+    display: inline;
+    font-family: "Cormorant Garamond", serif;
+    text-transform: capitalize;
+    font-style: italic;
+  }
   body nav {
     position: sticky;
     top: 70px;
@@ -172,12 +192,26 @@ body nav .dropdown input {
     margin: 0;
     text-decoration: none;
   }
-  body nav .dropdown li:not(:last-child) {
-    border-bottom: none;
+  body nav .dropdown .bag {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25vw;
+    background-color: #f0f0f0;
+    padding: 0.98rem 0;
   }
-  body nav .dropdown .bag,
   body nav .dropdown .access {
     display: none;
+    position: fixed;
+    top: 0;
+    right: 25vw;
+    width: 25vw;
+    background-color: #f0f0f0;
+    padding: 0.98rem 0;
+  }
+  body nav .dropdown .revealed {
+    display: block;
   }
   body nav .dropdown .diary {
     border-left: none;
@@ -185,6 +219,9 @@ body nav .dropdown input {
   body nav .dropdown .search {
     border-right: none;
     border-bottom: none;
+  }
+  body nav.scrolled {
+    top: 40px;
   }
 }
 

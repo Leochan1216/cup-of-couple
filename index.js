@@ -14,6 +14,8 @@ menuToggle.addEventListener('click', () => {
     }
 });
 
+
+
 //FEATURED ARTICLES
 //variables
 // gallery container
@@ -47,3 +49,62 @@ function scrollWithPause() {
 
 // scroll and pause
 let scrollInterval = setInterval(scrollWithPause, scrollPause);
+
+
+
+
+//REVEAL HIDDEN LIST ITEMS (bag, access)
+
+// reveal dropdown items
+function revealDropdownItems(items) {
+    items.forEach(item => {
+        item.classList.add('revealed');
+    });
+}
+
+// hide dropdown items
+function hideDropdownItems(items) {
+    items.forEach(item => {
+        item.classList.remove('revealed'); 
+    });
+}
+
+// Select the dropdown items
+const dropdownItems = document.querySelectorAll('.dropdown .bag, .dropdown .access');
+
+// event listener
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) {
+        revealDropdownItems(dropdownItems); 
+    } else {
+        hideDropdownItems(dropdownItems); 
+    }
+});
+
+//MOVING THE HEADER TO THE LEFT
+
+// header element
+const header = document.querySelector('header');
+
+// event listener
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) { 
+        header.classList.add('moved'); 
+    } else {
+        header.classList.remove('moved'); 
+    }
+});
+
+//MOVING THE NAV BAR UP
+
+// nav element
+const nav = document.querySelector('nav');
+
+// event listener
+window.addEventListener('scroll', () => {
+    if (window.scrollY > 500) { 
+        nav.classList.add('scrolled'); 
+    } else {
+        nav.classList.remove('scrolled'); 
+    }
+});

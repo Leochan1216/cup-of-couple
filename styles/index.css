@@ -74,53 +74,68 @@ body nav .dropdown input {
   }
   body .featured-projects {
     display: flex;
+    flex-direction: row;
     text-transform: uppercase;
     position: relative;
-    border: 1px solid #7b7b7b;
+    border-bottom: 1px solid #7b7b7b;
   }
   body .featured-projects h2 {
-    position: absolute;
+    position: fixed;
     padding: 0.5rem;
     font-size: 0.5rem;
     font-weight: inherit;
     background-color: #f0f0f0;
     border-bottom: 1px solid #7b7b7b;
     border-right: 1px solid #7b7b7b;
+    z-index: 15;
   }
-  body .featured-projects .feature-article {
+  body .featured-projects .gallery::-webkit-scrollbar {
+    display: none;
+  }
+  body .featured-projects .gallery {
     display: flex;
-    height: 100%;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    position: relative;
   }
-  body .featured-projects .feature-article img {
+  body .featured-projects .gallery .feature-article {
+    display: flex;
+    flex: 0 0 300px;
+    transition: transform 3s ease-in-out;
+  }
+  body .featured-projects .gallery .feature-article img {
     width: 150px;
     height: 100px;
     margin: 0.5rem;
   }
-  body .featured-projects .feature-article .feature-text {
+  body .featured-projects .gallery .feature-article .feature-text {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    border-right: 1px solid #7b7b7b;
+    padding-right: 1rem;
   }
-  body .featured-projects .feature-article .feature-text h3 {
+  body .featured-projects .gallery .feature-article .feature-text h3 {
     font-weight: inherit;
     font-family: "Literata", serif;
     margin: 0;
   }
-  body .featured-projects .feature-article .feature-text ul {
+  body .featured-projects .gallery .feature-article .feature-text ul {
     list-style: none;
     display: flex;
     font-size: 0.5rem;
     padding: 0;
   }
-  body .featured-projects .feature-article .feature-text ul li {
+  body .featured-projects .gallery .feature-article .feature-text ul li {
     border-right: 1px solid #7b7b7b;
-    padding: 0 0.5rem;
+    padding: 0 0.4rem;
   }
   body header {
     text-decoration: none;
     display: flex;
     justify-content: center;
-    position: relative;
+    position: sticky;
     border-bottom: none;
   }
   body header h1 {
@@ -130,6 +145,13 @@ body nav .dropdown input {
   }
   body header h2 {
     display: none;
+  }
+  body nav {
+    position: sticky;
+    top: 70px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
   }
   body nav .dropdown {
     display: flex !important;

@@ -121,22 +121,41 @@ body {
 
         .featured-projects {
             display: flex;
+            flex-direction: row;
             text-transform: uppercase;
             position: relative;
-            border: $desktop-border;
+            border-bottom: $desktop-border;
 
             h2 {
-                position: absolute;
+                position: fixed;
                 padding: .5rem;
                 font-size: 0.5rem;
                 font-weight: inherit;
                 background-color: $primary-color;
                 border-bottom: $desktop-border;
                 border-right: $desktop-border;
+                z-index: 15;
             }
+
+            .gallery::-webkit-scrollbar {
+                display: none;
+            }
+
+            .gallery {
+                display: flex;
+                overflow-x: auto;
+                scroll-snap-type: x mandatory;
+                scrollbar-width: none;
+                position: relative;
+                
+
+
             .feature-article {
                 display: flex;
-                height: 100%;
+                flex: 0 0 300px;
+                transition: transform 3s ease-in-out;
+               
+                
 
                 img{
                     width: 150px;
@@ -148,6 +167,8 @@ body {
                     display: flex;
                     flex-direction: column;
                     justify-content: space-between;
+                    border-right: $desktop-border;
+                    padding-right: 1rem;
 
                     h3 {
                         font-weight: inherit;
@@ -160,11 +181,14 @@ body {
                         display: flex;
                         font-size: .5rem;
                         padding: 0;
+                        
 
                         li {
                             border-right: $desktop-border;
-                            padding: 0 .5rem;
+                            padding: 0 .4rem;
+                            
                         }
+                    }
                     }
                 }
             }
@@ -175,21 +199,29 @@ body {
             text-decoration: none;
             display: flex;
             justify-content: center;
-            position: relative;
+            position: sticky;
             border-bottom: none;
-
+            
+            //cahnge this too
             h1 {
                 font-family: $font-title;
                 border-right: none;
                 font-size: 48px;
             }
-        
+
+            //turn this in access/bag
             h2 {
                 display: none;
             }
+
         }
 
         nav {
+            position: sticky; 
+            top: 70px;
+            left: 0; 
+            right: 0; 
+            z-index: 1000;
         
             .dropdown {
                 display: flex !important;

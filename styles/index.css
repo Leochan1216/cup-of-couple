@@ -1,0 +1,228 @@
+body {
+  background-color: #f0f0f0;
+  color: #303030;
+  padding: 0.5rem;
+}
+body .featured-projects {
+  display: none;
+}
+body header {
+  background-color: #f0f0f0;
+  font-family: "Libre Franklin", sans-serif;
+  text-decoration: underline;
+  font-size: 0.5rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  display: flex;
+  top: 0;
+  left: 0;
+  right: 0;
+  width: 100%;
+  z-index: 20;
+  position: fixed;
+  border-bottom: 1px solid #ccc;
+}
+body header h1, body header h2 {
+  font-size: inherit;
+  font-weight: inherit;
+  cursor: pointer;
+  margin: 0;
+  padding: 0.5rem;
+  text-align: center;
+  width: 50vw;
+}
+body header .desktop-title-detail {
+  display: none;
+}
+body header h1 {
+  border-right: 1px solid #ccc;
+}
+body nav {
+  font-family: "Libre Franklin", sans-serif;
+  font-size: 0.5rem;
+  font-weight: normal;
+  text-transform: uppercase;
+  position: relative;
+}
+body nav .dropdown {
+  background-color: #f0f0f0;
+  display: none;
+  position: fixed;
+  left: 0;
+  right: 0;
+  text-align: center;
+  list-style: none;
+  z-index: 10;
+  padding-inline-start: 0;
+}
+body nav .dropdown li {
+  text-decoration: underline;
+  padding: 0.5rem;
+}
+body nav .dropdown li:not(:last-child) {
+  border-bottom: 1px solid #ccc;
+}
+body nav .dropdown input {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+  background-color: #f0f0f0;
+  border: none;
+  text-align: center;
+}
+
+@media screen and (min-width: 800px) {
+  body {
+    margin: 0;
+    padding: 0;
+  }
+  body .featured-projects {
+    display: flex;
+    flex-direction: row;
+    text-transform: uppercase;
+    position: relative;
+    border-bottom: 1px solid #7b7b7b;
+  }
+  body .featured-projects h2 {
+    position: fixed;
+    padding: 0.5rem;
+    font-size: 0.5rem;
+    font-weight: inherit;
+    background-color: #f0f0f0;
+    border-bottom: 1px solid #7b7b7b;
+    border-right: 1px solid #7b7b7b;
+    z-index: 15;
+  }
+  body .featured-projects .gallery::-webkit-scrollbar {
+    display: none;
+  }
+  body .featured-projects .gallery {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    position: relative;
+  }
+  body .featured-projects .gallery .feature-article {
+    display: flex;
+    flex: 0 0 300px;
+    transition: transform 3s ease-in-out;
+  }
+  body .featured-projects .gallery .feature-article img {
+    width: 150px;
+    height: 100px;
+    margin: 0.5rem;
+  }
+  body .featured-projects .gallery .feature-article .feature-text {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-right: 1px solid #7b7b7b;
+    padding-right: 1rem;
+  }
+  body .featured-projects .gallery .feature-article .feature-text h3 {
+    font-weight: inherit;
+    font-family: "Literata", serif;
+    margin: 0;
+  }
+  body .featured-projects .gallery .feature-article .feature-text ul {
+    list-style: none;
+    display: flex;
+    font-size: 0.5rem;
+    padding: 0;
+  }
+  body .featured-projects .gallery .feature-article .feature-text ul li {
+    border-right: 1px solid #7b7b7b;
+    padding: 0 0.4rem;
+  }
+  body header {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    position: sticky;
+    border-bottom: none;
+  }
+  body header h1 {
+    font-family: "Yatra One", system-ui;
+    border-right: none;
+    font-size: 48px;
+  }
+  body header h2 {
+    display: none;
+  }
+  body header.moved {
+    width: 50vw;
+    left: 0;
+    position: fixed;
+    border: 1px solid #7b7b7b;
+  }
+  body header.moved h1 {
+    font-family: "Libre Franklin", sans-serif;
+    font-size: 0.8rem;
+    padding: 1rem;
+  }
+  body header.moved .desktop-title-detail {
+    display: inline;
+    font-family: "Cormorant Garamond", serif;
+    text-transform: capitalize;
+    font-style: italic;
+  }
+  body nav {
+    position: sticky;
+    top: 70px;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+  }
+  body nav .dropdown {
+    display: flex !important;
+    flex-direction: row;
+    justify-content: space-evenly;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    border-bottom: 1px solid #7b7b7b;
+  }
+  body nav .dropdown li {
+    width: 16.7vw;
+    border: 1px solid #7b7b7b;
+    padding: 1rem;
+    font-size: 0.8rem;
+    height: 1rem;
+    margin: 0;
+    text-decoration: none;
+  }
+  body nav .dropdown .bag {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 25vw;
+    background-color: #f0f0f0;
+    padding: 0.98rem 0;
+  }
+  body nav .dropdown .access {
+    display: none;
+    position: fixed;
+    top: 0;
+    right: 25vw;
+    width: 25vw;
+    background-color: #f0f0f0;
+    padding: 0.98rem 0;
+  }
+  body nav .dropdown .revealed {
+    display: block;
+  }
+  body nav .dropdown .diary {
+    border-left: none;
+  }
+  body nav .dropdown .search {
+    border-right: none;
+    border-bottom: none;
+  }
+  body nav.scrolled {
+    top: 40px;
+  }
+}
+
+/*# sourceMappingURL=index.css.map */

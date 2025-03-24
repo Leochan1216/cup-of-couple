@@ -270,11 +270,30 @@ body nav .dropdown input {
   font-size: 2rem;
   font-weight: normal;
 }
-.content-grid .row article p {
+.content-grid .row article .marquee {
+  display: block;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  width: 90%;
+  position: relative;
+  cursor: pointer;
+}
+.content-grid .row article .tags {
   margin-top: 5px;
   font-size: 1rem;
   color: #555;
   margin-top: auto;
+  padding-top: 0.5rem;
+}
+.content-grid .row article .date {
+  font-family: "Cormorant Garamond", serif;
+  font-style: italic;
+}
+.content-grid .row article .tagsAndDate {
+  border-top: 1px solid #7b7b7b;
+  display: flex;
+  justify-content: space-between;
 }
 
 footer {

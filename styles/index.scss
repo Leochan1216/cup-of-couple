@@ -321,11 +321,32 @@ body {
                 font-weight: normal;
             }
 
-            p {
+            .marquee {
+                display: block; 
+                white-space: nowrap;
+                overflow: hidden; 
+                text-overflow: ellipsis;
+                width: 90%; 
+                position: relative;
+                cursor: pointer;
+            }
+
+            .tags {
                 margin-top: 5px;
                 font-size: 1rem;
                 color: #555;
                 margin-top: auto;
+                padding-top: .5rem;
+            }
+
+            .date {
+                font-family: $font-garamond;
+                font-style: italic;
+            }
+            .tagsAndDate {
+                border-top: $desktop-border;
+                display: flex;
+                justify-content: space-between;
             }
         }
     }

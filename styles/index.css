@@ -80,6 +80,7 @@ body nav .dropdown {
 body nav .dropdown li {
   text-decoration: underline;
   padding: 0.5rem;
+  cursor: pointer;
 }
 body nav .dropdown li:not(:last-child) {
   border-bottom: 1px solid #ccc;
@@ -249,34 +250,31 @@ body nav .dropdown input {
 .content-grid .row {
   display: grid;
   gap: 20px;
-}
-.content-grid .row:nth-child(1) {
-  grid-template-columns: repeat(2, 1fr);
-}
-.content-grid .row:nth-child(2), .content-grid .row:nth-child(4) {
-  grid-template-columns: repeat(3, 1fr);
-}
-.content-grid .row:nth-child(3), .content-grid .row:nth-child(5) {
-  grid-template-columns: repeat(4, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
 }
 .content-grid .row article {
   border: 1px solid #ddd;
   padding: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  justify-content: flex-start;
 }
 .content-grid .row article img {
   width: 100%;
-  height: auto;
+  height: 200px;
   object-fit: cover;
 }
 .content-grid .row article h3 {
   margin-top: 10px;
-  font-size: 3rem;
+  font-size: 2rem;
   font-weight: normal;
 }
 .content-grid .row article p {
   margin-top: 5px;
   font-size: 1rem;
   color: #555;
+  margin-top: auto;
 }
 
 footer {
@@ -330,6 +328,13 @@ footer .footer-bottom {
 footer .footer-bottom p {
   font-size: 0.8rem;
   color: #999;
+}
+
+@media screen and (max-width: 800px) {
+  footer .footer-links {
+    display: flex;
+    flex-direction: column;
+  }
 }
 
 /*# sourceMappingURL=index.css.map */
